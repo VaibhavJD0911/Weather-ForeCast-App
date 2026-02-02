@@ -1,0 +1,131 @@
+
+/* Main control */
+.search-container .react-select__control {
+  min-height: 60px; /* Bigger height */
+  border-radius: 16px !important;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+
+  background: linear-gradient(
+    135deg,
+    rgba(28, 26, 23, 0.75),
+    rgba(18, 16, 14, 0.9)
+  ) !important;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  color: #fff !important;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.search-container .react-select__control:hover {
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(0, 188, 212, 0.25);
+}
+
+/* Focus glow */
+.search-container .react-select__control--is-focused {
+  box-shadow:
+    0 0 0 2px rgba(0, 188, 212, 0.6),
+    0 14px 40px rgba(0, 188, 212, 0.25) !important;
+}
+
+/* Placeholder */
+.search-container .react-select__placeholder {
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Input text */
+.search-container .react-select__input input {
+  color: #ffffff !important;
+  font-size: 1.05rem;
+}
+
+/* Selected value */
+.search-container .react-select__single-value {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+/* ================================
+   DROPDOWN MENU
+================================ */
+
+.search-container .react-select__menu {
+  margin-top: 10px;
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(22, 20, 18, 0.95),
+    rgba(12, 10, 8, 0.98)
+  );
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.75),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Options */
+.search-container .react-select__option {
+  padding: 14px 18px; /* Bigger click area */
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 4px 6px;
+
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+/* Hover / focus option */
+.search-container .react-select__option--is-focused {
+  background: rgba(0, 188, 212, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(0, 188, 212, 0.3);
+}
+
+/* Selected option */
+.search-container .react-select__option--is-selected {
+  background: linear-gradient(
+    135deg,
+    #00bcd4,
+    #00acc1
+  );
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Remove separator line */
+.search-container .react-select__indicator-separator {
+  display: none;
+}
+
+/* Dropdown arrow */
+.search-container .react-select__dropdown-indicator {
+  color: rgba(255, 255, 255, 0.7);
+  transition: transform 0.2s ease;
+}
+
+.search-container .react-select__control--is-focused
+.react-select__dropdown-indicator {
+  transform: rotate(180deg);
+  color: #00bcd4;
+}

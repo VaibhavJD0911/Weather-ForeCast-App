@@ -1,0 +1,121 @@
+.title {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+
+/* HORIZONTAL LAYOUT - Cards wrap to next line */
+.forecast-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+/* FORECAST CARD */
+.forecast-card {
+  min-width: 200px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(28,26,23,0.75), rgba(18,16,14,0.9));
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.forecast-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0, 188, 212, 0.25);
+  border-color: rgba(0, 188, 212, 0.3);
+}
+
+/* Day name */
+.forecast-day {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin-bottom: 12px;
+}
+
+/* Weather icon */
+.forecast-icon {
+  font-size: 3rem;
+  color: #00bcd4;
+  margin: 15px 0;
+  filter: drop-shadow(0 0 8px rgba(0, 188, 212, 0.55));
+}
+
+/* Temperature range */
+.forecast-temp {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00bcd4;
+  margin: 10px 0;
+}
+
+/* Weather description */
+.forecast-description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: capitalize;
+  margin-top: 8px;
+}
+
+/* Details section (expanded on click) */
+.forecast-details {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.forecast-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+
+.forecast-detail-label {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.forecast-detail-value {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .forecast-card {
+    min-width: 160px;
+  }
+
+  .forecast-icon {
+    font-size: 2.5rem;
+  }
+
+  .forecast-temp {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-card {
+    min-width: 140px;
+  }
+  
+  .forecast-day {
+    font-size: 0.95rem;
+  }
+}
