@@ -1,62 +1,60 @@
+/* ================================
+   SEARCH CONTAINER
+================================ */
 
 /* Main control */
 .search-container .react-select__control {
-  min-height: 60px; /* Bigger height */
-  border-radius: 16px !important;
-  padding: 10px 14px;
+  min-height: 52px;
+  border-radius: 14px !important;
+  padding: 6px 12px;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
 
-  background: linear-gradient(
-    135deg,
-    rgba(28, 26, 23, 0.75),
-    rgba(18, 16, 14, 0.9)
-  ) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: none;
 
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  box-shadow: none !important;
 
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.6),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #e8e8e8 !important;
 
-  font-family: "Poppins", sans-serif;
-  font-size: 1.05rem;
-  color: #fff !important;
-
-  transition: all 0.25s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
-/* Hover effect */
+/* Hover */
 .search-container .react-select__control:hover {
-  box-shadow:
-    0 12px 36px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(0, 188, 212, 0.25);
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  background: rgba(255, 255, 255, 0.045) !important;
+  box-shadow: none !important;
 }
 
-/* Focus glow */
+/* Focus */
 .search-container .react-select__control--is-focused {
-  box-shadow:
-    0 0 0 2px rgba(0, 188, 212, 0.6),
-    0 14px 40px rgba(0, 188, 212, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: none !important;
 }
 
 /* Placeholder */
 .search-container .react-select__placeholder {
-  color: rgba(255, 255, 255, 0.65) !important;
-  font-size: 1rem;
-  font-weight: 400;
+  color: rgba(255, 255, 255, 0.3) !important;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
 }
 
 /* Input text */
 .search-container .react-select__input input {
-  color: #ffffff !important;
-  font-size: 1.05rem;
+  color: #e8e8e8 !important;
+  font-size: 0.95rem;
+  font-family: "DM Sans", sans-serif !important;
 }
 
 /* Selected value */
 .search-container .react-select__single-value {
-  color: #ffffff !important;
-  font-weight: 500;
+  color: #e8e8e8 !important;
+  font-weight: 400;
 }
 
 /* ================================
@@ -64,68 +62,154 @@
 ================================ */
 
 .search-container .react-select__menu {
-  margin-top: 10px;
-  border-radius: 16px;
+  margin-top: 8px;
+  border-radius: 14px;
+  overflow: hidden;
 
-  background: linear-gradient(
-    135deg,
-    rgba(22, 20, 18, 0.95),
-    rgba(12, 10, 8, 0.98)
-  );
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
 
-  box-shadow:
-    0 14px 40px rgba(0, 0, 0, 0.75),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+}
 
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  color: #fff;
+/* Menu list padding */
+.search-container .react-select__menu-list {
+  padding: 6px;
 }
 
 /* Options */
 .search-container .react-select__option {
-  padding: 14px 18px; /* Bigger click area */
+  padding: 11px 14px;
   cursor: pointer;
-  border-radius: 10px;
-  margin: 4px 6px;
-
-  color: #ffffff;
-  transition: all 0.2s ease;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  transition: background 0.15s ease, color 0.15s ease;
+  background: transparent;
 }
 
-/* Hover / focus option */
+/* Hover option */
 .search-container .react-select__option--is-focused {
-  background: rgba(0, 188, 212, 0.18);
-  box-shadow: inset 0 0 0 1px rgba(0, 188, 212, 0.3);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  box-shadow: none;
 }
 
 /* Selected option */
 .search-container .react-select__option--is-selected {
-  background: linear-gradient(
-    135deg,
-    #00bcd4,
-    #00acc1
-  );
+  background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 400;
 }
 
-/* Remove separator line */
+/* Remove separator */
 .search-container .react-select__indicator-separator {
   display: none;
 }
 
 /* Dropdown arrow */
 .search-container .react-select__dropdown-indicator {
-  color: rgba(255, 255, 255, 0.7);
-  transition: transform 0.2s ease;
+  color: rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .search-container .react-select__control--is-focused
 .react-select__dropdown-indicator {
   transform: rotate(180deg);
-  color: #00bcd4;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Clear indicator */
+.search-container .react-select__clear-indicator {
+  color: rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease;
+}
+
+.search-container .react-select__clear-indicator:hover {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ================================
+   RESPONSIVE — TABLET (≤ 1024px)
+================================ */
+@media (max-width: 1024px) {
+  .search-container .react-select__control {
+    min-height: 50px;
+    font-size: 0.92rem;
+  }
+}
+
+/* ================================
+   RESPONSIVE — TABLET PORTRAIT (≤ 768px)
+================================ */
+@media (max-width: 768px) {
+  .search-container .react-select__control {
+    min-height: 48px;
+    padding: 4px 10px;
+    border-radius: 12px !important;
+    font-size: 0.9rem;
+  }
+
+  .search-container .react-select__menu {
+    border-radius: 12px;
+  }
+
+  .search-container .react-select__option {
+    padding: 10px 12px;
+    font-size: 0.88rem;
+  }
+}
+
+/* ================================
+   RESPONSIVE — MOBILE (≤ 480px)
+================================ */
+@media (max-width: 480px) {
+  .search-container .react-select__control {
+    min-height: 46px;
+    padding: 4px 8px;
+    border-radius: 10px !important;
+    font-size: 0.88rem;
+  }
+
+  .search-container .react-select__placeholder {
+    font-size: 0.85rem !important;
+  }
+
+  .search-container .react-select__input input {
+    font-size: 0.88rem !important;
+  }
+
+  .search-container .react-select__single-value {
+    font-size: 0.88rem;
+  }
+
+  .search-container .react-select__menu {
+    border-radius: 10px;
+    margin-top: 6px;
+  }
+
+  .search-container .react-select__option {
+    padding: 9px 10px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+  }
+}
+
+/* ================================
+   RESPONSIVE — SMALL MOBILE (≤ 360px)
+================================ */
+@media (max-width: 360px) {
+  .search-container .react-select__control {
+    min-height: 44px;
+    font-size: 0.85rem;
+  }
+
+  .search-container .react-select__option {
+    padding: 8px 10px;
+    font-size: 0.82rem;
+  }
 }
